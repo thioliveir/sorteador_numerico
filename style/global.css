@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* ESTILOS DE FONTES */
+    --family-sora: "Sora", sans-serif;
+    --family-roboto-mono: "Roboto Mono", monospace;
+    --family-roboto-flex: "Roboto Flex", sans-serif;
+
+    --text-display-lg: 800 4.5rem/1.3 var(--family-sora);
+    --text-display-md: 800 2.5rem/1.3 var(--family-sora);
+    --text-display-sm: 700 2rem/1.3 var(--family-sora);
+
+    --text-overline: 700 1rem/1.5 var(--family-roboto-mono);
+
+    --text-lg: 500 1rem/1.5 var(--family-roboto-flex);
+    --text-md: 500 .875rem/1.5 var(--family-roboto-flex);
+    --text-sm: 500 .75rem/1.5 var(--family-roboto-flex);
+    --text-label-md: 700 1.25rem/1.5 var(--family-roboto-flex);
+    --text-label-sm: 700 1rem/1.5 var(--family-roboto-flex);
+
+    /* COLOMETRIA */
+    --content-primary: #FFFFFF;
+    --content-secondary: #C7C9CC;
+    --content-tertiary: #D9D9D9;
+    --content-brand: #C58DE7;
+    --color-inverse: #030203;
+
+    --background-primary: #020202;
+    --background-secondary: #111012;
+    --background-tertiary: #24222E;
+    --background-brand: #C58DE7;
+    --background-gray: #3D3D3D;
+
+    --accent-pink: #D586E0;
+    --accent-blue: #91A1FA;
+    --accent-green: #77C0AF;
+    --accent-lime: #D1DC97;
+    --accent-red: #E9A9B3;
+          
+    --gradient-border: linear-gradient(#77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+    --gradient-background: linear-gradient(#D586E0 0%, #91A1FA 98.93%);
+    --gradient-content: linear-gradient(#C7C9CC 0%, #3D3D3D 100%);
+}
+
+body {
+    width: 100%;
+    height: 100dvh;
+    background-image: url(../Assets/img/background.svg);
+    background-size: cover;
+    color: var(--content-secondary);
+}
+h4 {
+    font: var(--text-overline);
+    text-transform: uppercase;
+    background: var(--gradient-content);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h3 {
+    font: var(--text-md);
+    color: var(--content-brand);
+}
+h2 {
+    font: var(--text-label-md);
+    color: var(--content-primary);
+    text-transform: uppercase;
+}
+
+h1 {
+    font: var(--text-display-lg);
+    color: var(--content-primary);
+    text-transform: uppercase;
+}
+
+p {
+    font: var(--text-sm);
+    color: var(--content-secondary);
+}
+img {
+    max-width: 100%;
+}
+

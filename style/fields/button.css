@@ -1,0 +1,81 @@
+button {
+    position: relative;
+    gap: .5rem;
+    padding-block: 1rem;
+    width: 30.125rem;
+    height: 3.5rem;
+    background: var(--background-tertiary);
+    margin-top: 2.5rem;
+    border: none;
+    border-radius: .5rem;
+    justify-content: center;
+    font: var(--text-label-md);
+    color: var(--content-primary);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+button img {
+    transition: transform 0.3s ease-in-out;
+}
+
+button:hover {
+    background: var(--background-secondary);
+}
+
+button::after, button::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: .5rem;
+        
+}
+
+button::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+button:hover::after {
+    background-image: conic-gradient(from var(--angle), #77C0AF, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+    animation: 3s border-glow linear infinite;
+}
+
+button:hover img {
+    animation: slide-right-left 1s ease-in-out infinite;
+}
+
+
+@keyframes border-glow {
+    0% {
+        --angle: 0deg;
+    }
+    100% {
+        --angle: 360deg;
+    }
+}
+
+@keyframes slide-right-left {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

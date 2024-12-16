@@ -1,0 +1,23 @@
+@import url(../style/fields/index.css);
+
+
+.content-form.choose-number {
+    & .title-form {
+        margin-bottom: 2.5rem;
+        p {
+            font: var(--text-lg);
+        }
+    }
+
+    & form {
+        width: 100%;
+        display: grid;
+
+
+        & .fields {
+            gap: .75rem;
+            margin-bottom: 1.25rem;
+        }
+
+    }
+}

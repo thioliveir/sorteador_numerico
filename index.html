@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!--PreLoad Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers - Sorteador de Números</title>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:wght@700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+    <main id="app">
+        <div class="logo flex">
+            <img src="Assets/img/logo.svg" alt="Logomarca">
+            <span>Numbers</span>
+        </div>
+        <div class="container flex">
+            <section class="content">
+                <header>
+                    <h4>Online - Gratuito</h3>
+                    <h1>Sorteador de Números</h1>
+                </header>
+                <div class="questions flex">
+                    <div class="items flex">
+                        <img src="Assets/img/questions-icon.svg" alt="ícone de pergunta">
+                        <div class="items-content">
+                            <h3>Como funciona o sorteador de números?</h3>
+                            <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+                        </div>
+
+                    </div>
+                    <div class="items flex">
+                        <img src="Assets/img/questions-icon.svg" alt="ícone de pergunta">
+                        <div class="items-content">
+                            <h3>Posso escolher o intervalo dos números?</h3>
+                            <p>Sim, você pode definir os valores mínimo (1) e máximo (até 100) para o intervalo dos números sorteados.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-form choose-number">
+                <div class="title-form">
+                    <h2>Quero sortear:</h2>
+                    <p>defina o intervalo (1 até 100) e a quantidade de números (1 a 3), clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+                </div>
+                <form action="" method="post" enctype="application/x-www-form-urlencoded">
+                    <div class="fields flex">
+                        <div class="input-wrapper">
+                            <label for="numberQuantity">Números</label>
+                            <input type="number" min="1" max="3" id="numberQuantity" name="numberQuantity" placeholder="1 a 3" required>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="numberOf">De</label>
+                            <input type="number" min="1" max="98" id="numberOf" name="numberOf" placeholder="1" required>
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="numberTo">Até</label>
+                            <input type="number" min="2" max="100" id="numberTo" name="numberTo" placeholder="100" required>
+                        </div>
+                    </div>
+                    <div class="option-toggle flex">
+                        <div class="toggle flex">
+                            <input type="checkbox" id="repeat" name="repeat">
+                            <label for="repeat"></label>
+                        </div>
+                    </div>
+                    <button class="flex">
+                        <span>Sortear</span>
+                        <img src="Assets/img/arrow.svg" alt="icone de prosseguir">
+                    </button>
+
+                </form>
+                
+            </section>
+
+            <section class="content-form result d-none">
+                <header class="flex">
+                    <h2>Resultado do sorteio</h2>
+                    <p>1º resultado</p>
+                </header>
+                <ul class="flex">
+
+                    <!--
+                    <li class="content-number">
+                        <span></span>
+                        <p>23</p>
+                    </li>
+                    <li class="content-number">
+                        <span></span>
+                        <p>12</p>
+                    </li>
+                    <li class="content-number">
+                        <span></span>
+                        <p>50</p>
+                    </li>
+                    -->
+
+                </ul>
+                <button type="button" id="retryBtn" class="flex">
+                    <span>Sortear Novamente</span>
+                    <img src="Assets/img/replay.svg" alt="Icone de Repetir">
+                </button>
+
+            </section>
+        </div>
+
+    </main>
+    <script src="script/script.js"></script>
+</body>
+</html>

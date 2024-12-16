@@ -1,0 +1,20 @@
+section.content {
+    & header {
+        margin-bottom: 2.375rem;
+        & h4 {
+            margin-bottom: .75rem;
+        }
+    }
+    & .questions {
+        width: 24.125rem;
+        flex-direction: column;
+        gap: 2rem;
+        & .items {
+            gap: .5rem;
+            align-items: flex-start;
+            & img {
+                width: 20px;
+            }
+        }
+    }
+}

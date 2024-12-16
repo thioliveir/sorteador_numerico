@@ -1,0 +1,132 @@
+label {
+    display: block;
+    font: var(--text-label-md);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.input-wrapper {
+    width: 6.2rem;
+
+    & input {
+        border: 2px solid transparent;
+    }
+
+    & label {
+        margin-bottom: .5rem;
+    }
+}
+
+input {
+    appearance: none;
+    width: 100%;
+    border-radius: .5rem;
+    padding: .25rem .5rem;
+    text-align: center;
+    background: var(--background-secondary);
+    outline: none;
+
+    font: var(--text-display-sm);
+    color: var(--content-primary);
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.input-wrapper input:hover {
+    background: var(--background-tertiary);
+    border-image-source: var(--gradient-background);
+    border-image-slice: 1;
+    border-image-width: 1px;
+}
+
+.input-wrapper input:focus, .input-wrapper input:active {
+    border: 2px solid;
+    background: var(--background-tertiary);
+    border-image-source: var(--gradient-background);
+    border-image-slice: 1;
+    border-image-width: 2px;
+    
+    /*
+    background-image: linear-gradient(#24222E, #24222E),
+    linear-gradient(#77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    */
+    
+}
+
+.input-wrapper:has(input:focus) label,
+.input-wrapper:has(input:hover) label,
+.input-wrapper:has(input:active) label {
+    color: var(--background-brand);
+}
+
+.option-toggle {
+    width: 11rem; /*Tamanho total do bloco*/
+
+    & .toggle {
+        height: 2.5rem; /*Altura total do bloco de input*/
+        gap: .5rem;
+
+        & input {
+            padding: 0;
+            position: relative;
+            width: 3rem; /*Tamanho total do botão toggle*/
+            height: 1.5rem; /*Altura total do botão toggle*/
+            border-radius: 999px;
+            box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            background: var(--content-tertiary);
+
+            &:focus {
+                border: none;
+            }
+
+            &:checked {
+                background: var(--gradient-background);
+
+
+                & ~ label::before {
+                    content: "Não repetir número";
+                    
+                }
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 1px;
+                height: 100%; /*Altura da bolinha do botão*/
+                width: 1.5rem; /*Tamanho da bolinha do botão*/
+                background: var(--content-primary);
+                border-radius: 999px;
+                transform: scale(0.81); /*Diminui a proporção da bolinha do botão*/
+                transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+            }
+            &:checked::before {
+                left: 1.4rem;
+            }
+
+        }
+
+        & label {
+            width: 9rem;
+            font: var(--text-md);
+            color: var(--content-primary);
+            text-transform: none;
+
+            &::before {
+                content: "Repetir número";
+            }
+        }
+    }
+
+
+    
+
+}
